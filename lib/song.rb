@@ -9,13 +9,16 @@ class Song
     @@count += 1
     
     @genre = genre 
+
     @@genres << genre
-    
+
+   
     @artist = artist
     @@artists << artist
   end 
   
   def self.genre_count
+
     @@genres.inject(Hash.new(0)) {|max, i| max[i]+=1; max}
   end 
   
@@ -36,5 +39,9 @@ class Song
     end 
     
 end 
+
+Song.count
+Song.artists
+
 
 
